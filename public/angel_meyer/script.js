@@ -1,7 +1,16 @@
-const clickMeButtonElement = window.document.querySelector("#click-me-button");
+function quizButtonListener(event) {
+   event.preventDefault()
 
-if (clickMeButtonElement) {
-   clickMeButtonElement.addEventListener("click", function() {
-    window.alert("You clicked me!");
-   });
+   let quizContainer = window.document.getElementById("quiz-container")
+   quizContainer.classList.toggle("hidden")
 }
+
+function gradeQuiz(event) {
+   event.preventDefault()
+}
+
+let quizButton = window.document.getElementById("open-quiz-button")
+quizButton.addEventListener("click", quizButtonListener)
+
+let quizForm = window.document.getElementById("quiz")
+quizForm.addEventListener("submit", gradeQuiz);

@@ -53,3 +53,7 @@ img {
     height: auto;
 }
 
+.hidden {
+    display: none;
+
+}
