@@ -57,3 +57,13 @@ img {
     display: none;
 
 }
+
+.correct-answer {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: red;
+    font-weight: bold;
+}

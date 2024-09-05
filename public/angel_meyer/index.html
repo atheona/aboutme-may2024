@@ -24,22 +24,22 @@
             <button id="open-quiz-button">Take My Quiz</button>
             <div id="quiz-container" class="hidden">
                 <form id="quiz">
-                <p>I have 6 cats and 4 dogs.</p>
+                <p id="pet-question">I have 6 cats and 4 dogs.</p>
                     <input type="radio" id="animal-true" value="true" name="animal">
                     <label for="animal-true">True</label>
                     <input type="radio" id="animal-false" value="false" name="animal">
                     <label for="animal-false">False</label>
-                <p>I was born in Louisville, KY.</p>
+                <p id="city-question">I was born in Louisville, KY.</p>
                     <input type="radio" id="city-true" value="true" name="city">
                     <label for="city-true">True</label>
                     <input type="radio" id="city-false" value="false" name="city">
                     <label for="city-false">False</label>
-                <p>My favorite college football team is Alabama.</p>
+                <p id="football-question">My favorite college football team is Alabama.</p>
                     <input type="radio" id="football-true" value="true" name="football">
                     <label for="football-true">True</label>
                     <input type="radio" id="football-false" value="false" name="football">
                     <label for="football-false">False</label>
-                <p>My favorite thing to photograph is wildlife.</p>
+                <p id="photography-question">My favorite thing to photograph is wildlife.</p>
                     <input type="radio" id="photography-true" value="true" name="photography">
                     <label for="photography-true">True</label>
                     <input type="radio" id="photography-false" value="false" name="photography">
@@ -48,7 +48,7 @@
                 <button type="submit">Submit</button>
                 </form>
             </div>
-
+            <div id="quiz-score" class="hidden">Total Score:</div>
         </main>
         <script type="module" src="./script.js"></script> 
     </body>
