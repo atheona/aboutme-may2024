@@ -1,0 +1,22 @@
+{
+    "false": [
+        "falsey-false-1",
+        "falsey-false-2",
+        "falsey-false-3",
+        "falsey-false-4",
+        "falsey-false-5",
+        "falsey-false-6",
+        "falsey-false-7",
+        "falsey-false-8"
+    ],
+    "true": [
+        "truthy-truth-1",
+        "truthy-truth-2",
+        "truthy-truth-3",
+        "truthy-truth-4",
+        "truthy-truth-5",
+        "truthy-truth-6",
+        "truthy-truth-7",
+        "truthy-truth-8"
+    ]
+}
