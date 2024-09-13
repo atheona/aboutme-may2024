@@ -18,6 +18,7 @@ function createQuizQuestion(questionsElement) {
       questionLabel.innerHTML = question.question
       questionsElement.appendChild(questionInput)
       questionsElement.appendChild(questionLabel)
+      questionsElement.appendChild(document.createElement('br'))
    })
 }
 

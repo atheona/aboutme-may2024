@@ -1,22 +1,26 @@
 {
     "false": [
-        "falsey-false-1",
-        "falsey-false-2",
-        "falsey-false-3",
-        "falsey-false-4",
-        "falsey-false-5",
-        "falsey-false-6",
-        "falsey-false-7",
-        "falsey-false-8"
+        "I'm an only child.",
+        "I've never broken a bone.",
+        "I was born in Louisville.",
+        "I played saxophone in middle school.",
+        "My favorite thing to photograph is wildlife.",
+        "I've vacationed out of the country.",
+        "When I was 12, I went skydiving.",
+        "I'm allergic to peanuts.",
+        "I'm a Virgo.",
+        "I once met President Obama."
     ],
     "true": [
-        "truthy-truth-1",
-        "truthy-truth-2",
-        "truthy-truth-3",
-        "truthy-truth-4",
-        "truthy-truth-5",
-        "truthy-truth-6",
-        "truthy-truth-7",
-        "truthy-truth-8"
+        "I have 6 cats and 4 dogs.",
+        "I met my husband online.",
+        "My favorite college football team is Alabama.",
+        "When I was in middle school, I won a distinguished award in choir.",
+        "My favorite time of the year is Fall.",
+        "I have 3 kids.",
+        "I grew up a preacher's kid.",
+        "I enjoy playing video games.",
+        "I drive a Jeep named Spook.",
+        "I know how to play flute, clarinet, and some piano."
     ]
 }
