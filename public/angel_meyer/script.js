@@ -1,11 +1,21 @@
 import data from './answers.json' with {type: 'json'}
 
+function shuffleChoices(choices) {
+   let currentIndex = choices.length;
+   while (currentIndex != 0) {
+     let randomIndex = Math.floor(Math.random() * currentIndex);
+     currentIndex--;
+     [choices[currentIndex], choices[randomIndex]] = [
+      choices[randomIndex], choices[currentIndex]];
+   }
+}
+
 function createQuizQuestion(questionsElement) {
    let choices = []
    choices.push({"truth": true, "question": data.true.pop(Math.floor(Math.random() * data.true.length))})
    choices.push({"truth": true, "question": data.true.pop(Math.floor(Math.random() * data.true.length))})
    choices.push({"truth": false,"question": data.false.pop(Math.floor(Math.random() * data.false.length))})
-
+   shuffleChoices(choices)
    choices.forEach((question, index) => {
       let questionInput = document.createElement('input')
       questionInput.type = 'radio'
@@ -21,6 +31,11 @@ function createQuizQuestion(questionsElement) {
       questionsElement.appendChild(document.createElement('br'))
    })
 }
+function clearQuizQuestions(questionsElement) {
+   while (questionsElement.firstChild) { 
+   questionsElement.removeChild(questionsElement.firstChild);
+   }
+}
 
 function quizButtonListener(event) {
    event.preventDefault()
@@ -29,6 +44,15 @@ function quizButtonListener(event) {
 
    let quizContainer = window.document.getElementById("quiz-container")
    quizContainer.classList.toggle("hidden")
+}
+
+function nextQuestion(event) {
+   event.preventDefault()
+   let questionsElement = document.getElementById("question-container")
+   clearQuizQuestions(questionsElement)
+   createQuizQuestion(questionsElement)
+
+
 }
 
 function gradeQuiz(event) {
@@ -49,3 +73,6 @@ quizButton.addEventListener("click", quizButtonListener)
 
 let quizForm = window.document.getElementById("quiz")
 quizForm.addEventListener("submit", gradeQuiz);
+
+let nextButton = window.document.getElementById("next")
+nextButton.addEventListener("click", nextQuestion);
