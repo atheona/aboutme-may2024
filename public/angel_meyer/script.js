@@ -31,6 +31,7 @@ function createQuizQuestion(questionsElement) {
       questionsElement.appendChild(document.createElement('br'))
    })
 }
+
 function clearQuizQuestions(questionsElement) {
    while (questionsElement.firstChild) { 
    questionsElement.removeChild(questionsElement.firstChild);
@@ -41,6 +42,10 @@ function quizButtonListener(event) {
    event.preventDefault()
    let questionsElement = document.getElementById("question-container")
    createQuizQuestion(questionsElement)
+   let questionCountElement = document.getElementById("question-count")
+   let questionCount = +document.getElementById("question-count").value
+   questionCount = 1
+   questionCountElement.value = questionCount
 
    let quizContainer = window.document.getElementById("quiz-container")
    quizContainer.classList.toggle("hidden")
@@ -49,6 +54,16 @@ function quizButtonListener(event) {
 function nextQuestion(event) {
    event.preventDefault()
    let questionsElement = document.getElementById("question-container")
+   let questionCountElement = document.getElementById("question-count")
+   let questionCount = +document.getElementById("question-count").value
+   questionCount += 1
+
+   questionCountElement.value = questionCount
+
+   if (questionCount >= 10) {
+      let nextButton = window.document.getElementById("next-button")
+      nextButton.disabled = true
+   }
    clearQuizQuestions(questionsElement)
    createQuizQuestion(questionsElement)
 
